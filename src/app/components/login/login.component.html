@@ -1,0 +1,14 @@
+<h3>Login</h3>
+<app-message></app-message>
+<form>
+
+    Email :
+    <input type="email" [(ngModel)] = "email" name="email" required />
+    <br/>
+
+    Password:
+    <input type="password" [(ngModel)] = "password" name="password" required />
+<br/>
+    <button (click) = "login()" class="btn btn-success">Submit</button>
+
+</form>
