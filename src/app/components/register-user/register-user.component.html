@@ -1,6 +1,6 @@
 <h3>Register</h3>
 
-<form>
+<form (submit)="register()">
 
     Name:
     <input type="name" [(ngModel)] = "user.name" name="name" required /> <br/>
@@ -12,6 +12,6 @@
     <input type="password" [(ngModel)] = "user.password" name="password" required />
     <br/>
 
-    <button (click) = "register()" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success">Submit</button>
 
 </form>

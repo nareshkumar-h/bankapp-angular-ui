@@ -9,15 +9,14 @@ import { User } from 'src/app/models/user';
 })
 export class RegisterUserComponent implements OnInit {
 
-  user:User;
+  user:User = new User();
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
-  register(){
-    //this.user =  {"name":"Naresh", "email":"naresh@gmail.com", "password":"pass123"};
+  register(){    
     console.log("User", this.user);
     this.userService.register(this.user).subscribe ( (res)=>{
       console.log(res);

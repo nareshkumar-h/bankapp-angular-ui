@@ -29,7 +29,7 @@ export class UserService {
   }
 
   findOne(id:number){
-    return this.http.get( this.serverUrl + "users/"+ id);
+    return this.http.get<User>( this.serverUrl + "users/"+ id);
   }
   
 }

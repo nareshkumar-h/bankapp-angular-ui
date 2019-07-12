@@ -10,27 +10,25 @@ import { Router } from '@angular/router';
 })
 export class ListusersComponent implements OnInit {
 
-  constructor(private userService:UserService, private router:Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.list();
   }
 
-  users:User[];
+  users: User[];
 
-  list(){
-    this.userService.list().subscribe ((res)=>{
+  list() {
+    this.userService.list().subscribe((res) => {
       console.log(res);
       this.users = res;
     });
   }
 
-  delete(id:number){
-    console.log("Delete User", id);
-    this.userService.delete(id).subscribe ( (res)=>{
-      console.log(res);
-      this.router.navigate(['listusers']);
-    })
+  view(id:number){
+    this.router.navigate(['viewuser',id]);
   }
+
+ 
 
 }

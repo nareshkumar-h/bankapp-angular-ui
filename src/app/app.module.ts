@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { MainComponent } from './layouts/main/main.component';
 import { MessageComponent } from './components/message/message.component';
+import { ViewUserComponent } from './components/view-user/view-user.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MessageComponent } from './components/message/message.component';
     LoginComponent,
     HeaderComponent,
     MainComponent,
-    MessageComponent
+    MessageComponent,
+    ViewUserComponent
   ],
   imports: [
     BrowserModule,
